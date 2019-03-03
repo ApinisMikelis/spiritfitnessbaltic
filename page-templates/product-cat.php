@@ -9,14 +9,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<div id="primary" class="site-content">
+    <div id="content" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-			<?php endwhile; // end of the loop. ?>
+        <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('content', 'page'); ?>
+        <?php endwhile; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+    </div>
+</div>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
