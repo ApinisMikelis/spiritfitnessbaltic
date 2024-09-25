@@ -1422,36 +1422,35 @@ footer {
 	font-size: 0.9em;
 }
 
-footer .footer-contacts a {
-	display: flex;
-	padding: 1rem;
-	justify-content: center;
-	font-size: 2rem;
-	text-transform: uppercase;
-	background: #96172E;
-	color: #FFFFFF;
+.footer-contacts li {
+	display: block;
+	float: left;
+	width: 40%;
+	padding: 0.4em 0 0.7em 3.8em;
+	margin-bottom: 1em;
 }
 
-footer .footer-contacts a:hover {
-	color: #FFFFFF;
-}
-
+.footer-contacts .address,
 .sidebar-contacts .address {
 	background: url(img/map.png) no-repeat 0 0;
 }
 
+.footer-contacts .phone,
 .sidebar-contacts .phone {
 	background: url(img/phone.png) no-repeat 0 0;
 }
 
+.footer-contacts .mail,
 .sidebar-contacts .mail {
 	background: url(img/mail.png) no-repeat 0 0;
 }
 
+.footer-contacts .facebook,
 .sidebar-contacts .facebook {
 	background: url(img/facebook.png) no-repeat 0 0;
 }
 
+.footer-contacts .skype,
 .sidebar-contacts .skype {
 	background: url(img/skype.png) no-repeat 0 0;
 }

@@ -12,9 +12,13 @@
 </div>
 <footer id="colophon" role="contentinfo">
     <div class="footer-contacts">
-        <a href="https://trenazieri.lv">
-            Contact dealer
-        </a>
+        <ul>
+            <li class="address">Biekensalas 6, Riga, Latvia</li>
+            <li class="phone">+371 67845794, +371 26625388</li>
+            <li class="mail"><a href="mailto:info@sportsystems.lv">info@sportsystems.lv</a></li>
+            <li class="facebook"><a target="_blank" href="https://www.facebook.com/SportsystemsLtd">SportsystemsLtd</a></li>
+            <li class="skype"><a href="skype:sport.systems?call">sport.systems (click to call us)</a></li>
+        </ul>
     </div>
     <div class="footer-menus">
         <div class="general-map">
