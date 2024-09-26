@@ -28,18 +28,18 @@
 			<h1 class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
-			<?php endif; // is_single() ?>
-		</header><!-- .entry-header -->
+			<?php endif; ?>
+		</header>
 
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<?php if ( is_search() ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
+		</div>
 		<?php else : ?>
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
+		</div>
 		<?php endif; ?>
 
-	</article><!-- #post -->
+	</article>

@@ -20,7 +20,6 @@ get_header(); ?>
 
 			<?php twentytwelve_content_nav( 'nav-above' ); ?>
 
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
@@ -37,13 +36,13 @@ get_header(); ?>
 				<div class="entry-content">
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
 					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
+				</div>
+			</article>
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
+		</div>
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
