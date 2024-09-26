@@ -7,20 +7,22 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header();
+
+?>
+
+
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
-				<?php
-				$custom_fields = get_post_custom();
-			?>
-			<?php endwhile; // end of the loop. ?>
+				<?php $custom_fields = get_post_custom(); ?>
+			<?php endwhile; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+	</div>
 
 	<aside class="product-specifications">
 		<?php if ( ! post_password_required() && ! is_attachment() ) :
@@ -34,6 +36,8 @@ get_header(); ?>
 							$buy_link = $value;
 						} else if ( $field_key === '_product_price' ) {
 							$product_price = $value;
+						} else if ( $field_key === '_hide_price' ) {
+							$hide_price = $value;
 						} else if ( $field_key === '_product_comparison' ) {
 							$comparison = $value;
 						} else if ( $field_key === '_sales_sheet' ) {
@@ -81,7 +85,14 @@ get_header(); ?>
 
 			echo '<div class="action-panel">';
 
-				echo '<a target="_blank" class="buy-link" href="' . $buy_link . '">buy now - ' . $product_price . '</a>';
+
+				echo '<a target="_blank" class="buy-link" href="' . $buy_link . '">buy now';
+
+				if ($hide_price != 1) {
+					echo ' - ' . $product_price;
+				}
+
+				echo '</a>';
 
 				if ( $comparison != NULL ) {
 					echo '<a href="' . $comparison . '">product comparison</a>';
